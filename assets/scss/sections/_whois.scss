@@ -1,0 +1,60 @@
+#whois{
+    @include space(0, $whois-margin);
+    border: 0;
+    @include bg-image($whois-bg-url, center center, no-repeat, cover);
+
+    h2{
+        position: relative;
+        @include space($whois-h2-margin, 0);
+        border: 0;
+        @include font($f-name-noto, $f-size-30, $color-white, $f-weight-light, normal);
+        text-transform: uppercase;
+        letter-spacing: $whois-h2-letter;
+
+        &::after{
+            content: '';
+            position: absolute;
+            bottom: $whois-h2-after-bottom;
+            left: 0;
+            width: $whois-h2-after-width;
+            @include border(solid, $whois-h2-after-border-xl, $color-white);
+            border-top: none;
+            border-left: none;
+            border-right: none;
+        }
+    }
+
+    p{
+        @include space($whois-p-margin, 0);
+        border: 0;
+        @include font($f-name-noto, $f-size-14, $color-white, $f-weight-regular, normal);
+        text-transform: initial;
+    }
+
+    .social-box{
+        display: flex;
+        @include flex(row, flex-start, center);
+        @include space(0, 0);
+        border: 0;
+        @include size(100%, auto);
+
+        a{
+            display: flex;
+            @include flex(row, center, center);
+            @include space($whois-social-a-margin-xl, 0);
+            background-color: transparent;
+            @include border(solid, $whois-social-a-border, $color-white);
+            @include max-size(100%, 100%);
+            @include size($whois-social-a-size, $whois-social-a-size);
+
+            &:hover{
+                background-color: $color-cyan;
+                border-color: $color-cyan;
+            }
+
+            &:last-child{
+                margin: 0;
+            }
+        }
+    }
+}

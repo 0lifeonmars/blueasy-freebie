@@ -1,0 +1,198 @@
+#services{
+    h2{
+        @include media(lg){font-size: $f-size-28;}
+        @include media(md){font-size: $f-size-26;}
+        @include media(sm){font-size: $f-size-24;}
+        @include media(xs){font-size: $f-size-22;}
+
+        &::after{
+            @include media(sm){border-width: $services-h2-after-border-sm;}
+            @include media(xs){border-width: $services-h2-after-border-sm;}
+        }
+    }
+
+    h3{
+        @include media(lg){font-size: $f-size-20;}
+        @include media(md){font-size: $f-size-18;}
+        @include media(sm){font-size: $f-size-16;}
+        @include media(xs){font-size: $f-size-16;}
+    }
+}
+
+#portfolio{
+    h2{
+        @include media(lg){font-size: $f-size-28;}
+        @include media(md){font-size: $f-size-26;}
+        @include media(sm){font-size: $f-size-24;}
+        @include media(xs){font-size: $f-size-22;}
+
+        &::after{
+            @include media(sm){border-width: $portfolio-h2-after-border-sm;}
+            @include media(xs){border-width: $portfolio-h2-after-border-sm;}
+        }
+    }
+
+    .filters{
+        @include media(md){align-items: center;}
+        @include media(sm){align-items: center;}
+        @include media(xs){align-items: center;}
+
+        ul{
+            li{
+                @include media(xs){display: block; margin: $portfolio-filter-li-margin-xs}
+
+                a{
+                    @include media(md){margin: 0;}
+                    @include media(sm){margin: 0; font-size: $f-size-12;}
+                    @include media(xs){margin: 0; font-size: $f-size-12;}
+                }
+            }
+        }
+    }
+
+    .portfolio-grid{
+        .responsive-w90{
+            @include media(xs){width: 100%;}
+        }
+    }
+}
+
+#default{
+    h2{
+        @include media(lg){font-size: $f-size-28;}
+        @include media(md){font-size: $f-size-26;}
+        @include media(sm){font-size: $f-size-24;}
+        @include media(xs){font-size: $f-size-22;}
+
+        &::after{
+            @include media(sm){border-width: $default-h2-after-border-sm;}
+            @include media(xs){border-width: $default-h2-after-border-sm;}
+        }
+    }
+
+    p{
+        @include media(sm){font-size: $f-size-12;}
+        @include media(xs){font-size: $f-size-12;}
+    }
+
+    .button{
+        @include media(md){width: 100%;}
+        @include media(sm){width: 100%; font-size: $f-size-12;}
+        @include media(xs){width: 100%; font-size: $f-size-12;}
+    }
+
+    .video-content{
+        @include media(md){max-height: $default-video-height-md; margin: $default-video-margin-md;}
+        @include media(sm){max-height: $default-video-height-sm; margin: $default-video-margin-md;}
+        @include media(xs){max-height: $default-video-height-xs; margin: $default-video-margin-md;}
+    }
+}
+
+#twitter{
+    h2{
+        @include media(lg){font-size: $f-size-28;}
+        @include media(md){font-size: $f-size-26;}
+        @include media(sm){font-size: $f-size-24;}
+        @include media(xs){font-size: $f-size-22;}
+
+        &::after{
+            @include media(sm){border-width: $twitter-h2-after-border-sm;}
+            @include media(xs){border-width: $twitter-h2-after-border-sm;}
+        }
+    }
+
+    p{
+        @include media(lg){font-size: $f-size-26;}
+        @include media(md){font-size: $f-size-24;}
+        @include media(sm){font-size: $f-size-22;}
+        @include media(xs){font-size: $f-size-20;}
+    }
+}
+
+#whois{
+    h2{
+        @include media(lg){font-size: $f-size-28;}
+        @include media(md){font-size: $f-size-26;}
+        @include media(sm){font-size: $f-size-24;}
+        @include media(xs){font-size: $f-size-22;}
+
+        &::after{
+            @include media(sm){border-width: $whois-h2-after-border-sm;}
+            @include media(xs){border-width: $whois-h2-after-border-sm;}
+        }
+    }
+
+    p{
+        @include media(sm){font-size: $f-size-12;}
+        @include media(xs){font-size: $f-size-12;}
+    }
+
+    .social-box{
+        @include media(md){justify-content: space-between;}
+        @include media(sm){justify-content: space-between;}
+        @include media(xs){justify-content: space-between;}
+
+        a{
+            @include media(sm){margin: $whois-social-a-margin-sm;}
+            @include media(xs){margin: $whois-social-a-margin-xs;}
+        }
+    }
+}
+
+#testimonials{
+    h2{
+        @include media(lg){font-size: $f-size-28;}
+        @include media(md){font-size: $f-size-26;}
+        @include media(sm){font-size: $f-size-24;}
+        @include media(xs){font-size: $f-size-22;}
+
+        &::after{
+            @include media(sm){border-width: $testimonials-h2-after-border-sm;}
+            @include media(xs){border-width: $testimonials-h2-after-border-sm;}
+        }
+    }
+
+    blockquote{
+        p{
+            @include media(lg){font-size: $f-size-26;}
+            @include media(md){font-size: $f-size-24;}
+            @include media(sm){font-size: $f-size-22;}
+            @include media(xs){font-size: $f-size-20;}
+        }
+
+        span{
+            @include media(sm){font-size: $f-size-12;}
+            @include media(xs){font-size: $f-size-12;}
+        }
+    }
+}
+
+#contact{
+    h2{
+        @include media(lg){font-size: $f-size-28;}
+        @include media(md){font-size: $f-size-26;}
+        @include media(sm){font-size: $f-size-24;}
+        @include media(xs){font-size: $f-size-22;}
+
+        &::after{
+            @include media(sm){border-width: $contact-h2-after-border-sm;}
+            @include media(xs){border-width: $contact-h2-after-border-sm;}
+        }
+    }
+
+    label{
+        @include media(sm){font-size: $f-size-12;}
+        @include media(xs){font-size: $f-size-12;}
+    }
+
+    input[type=text], input[type=email], textarea{
+        @include media(sm){font-size: $f-size-12;}
+        @include media(xs){font-size: $f-size-12;}
+    }
+
+    input[type=submit]{
+        @include media(md){padding: $contact-submit-padding-md; width: 100%;}
+        @include media(sm){padding: $contact-submit-padding-md; width: 100%; font-size: $f-size-12;}
+        @include media(xs){padding: $contact-submit-padding-md; width: 100%; font-size: $f-size-12;}
+    }
+}

@@ -1,0 +1,51 @@
+#testimonials{
+    @include space(0, $testimonials-padding);
+    border: 0;
+    background-color: $color-white;
+
+    h2{
+        position: relative;
+        @include space($testimonials-h2-margin, 0);
+        border: 0;
+        @include font($f-name-noto, $f-size-30, $color-gray, $f-weight-light, normal);
+        text-transform: uppercase;
+        letter-spacing: $testimonials-h2-letter;
+
+        &::after{
+            content: '';
+            position: absolute;
+            bottom: $testimonials-h2-after-bottom;
+            left: 0;
+            width: $testimonials-h2-after-width;
+            @include border(solid, $testimonials-h2-after-border-xl, $color-gray);
+            border-top: none;
+            border-left: none;
+            border-right: none;
+        }
+    }
+
+    img{
+        position: absolute;
+        top: $testimonials-img-top;
+        right: 0;
+    }
+
+    blockquote{
+        @include space(0, 0);
+        border: 0;
+
+        p{
+            @include space($testimonials-blockquote-p-margin, 0);
+            border: 0;
+            @include font($f-name-noto, $f-size-28, $color-gray, $f-weight-light, normal);
+            text-transform: initial;
+        }
+
+        span{
+            @include space(0, 0);
+            border: 0;
+            @include font($f-name-noto, $f-size-14, $color-cyan, $f-weight-bold, normal);
+            text-transform: capitalize;
+        }
+    }
+}

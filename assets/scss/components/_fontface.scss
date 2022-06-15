@@ -1,0 +1,11 @@
+/** FONT NOTO SANS **/
+@font-face {@include facefont($f-name-noto, $f-noto-url-300, $f-weight-light, normal);}
+@font-face {@include facefont($f-name-noto, $f-noto-url-300-italic, $f-weight-light, italic);}
+@font-face {@include facefont($f-name-noto, $f-noto-url-400, $f-weight-regular, normal);}
+@font-face {@include facefont($f-name-noto, $f-noto-url-400-italic, $f-weight-regular, italic);}
+@font-face {@include facefont($f-name-noto, $f-noto-url-500, $f-weight-medium, normal);}
+@font-face {@include facefont($f-name-noto, $f-noto-url-500-italic, $f-weight-medium, italic);}
+@font-face {@include facefont($f-name-noto, $f-noto-url-600, $f-weight-semibold, normal);}
+@font-face {@include facefont($f-name-noto, $f-noto-url-600-italic, $f-weight-semibold, italic);}
+@font-face {@include facefont($f-name-noto, $f-noto-url-700, $f-weight-bold, normal);}
+@font-face {@include facefont($f-name-noto, $f-noto-url-700-italic, $f-weight-bold, italic);}

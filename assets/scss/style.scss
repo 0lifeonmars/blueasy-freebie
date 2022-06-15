@@ -1,0 +1,20 @@
+@import './resourses/colors';
+@import './resourses/fonts';
+@import './resourses/variables';
+@import './resourses/mixins';
+
+
+@import './components/body';
+@import './components/header';
+@import './components/footer';
+@import './components/navbar';
+@import './components/icons';
+
+
+@import './sections/services';
+@import './sections/portfolio';
+@import './sections/default';
+@import './sections/twitter';
+@import './sections/whois';
+@import './sections/testimonials';
+@import './sections/contact';

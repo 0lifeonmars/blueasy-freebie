@@ -1,0 +1,45 @@
+#services{
+    @include space(0, $services-padding);
+    border: 0;
+    background-color: $color-cyan;
+
+    h2{
+        position: relative;
+        @include space($services-h2-margin, 0);
+        border: 0;
+        @include font($f-name-noto, $f-size-30, $color-white, $f-weight-light, normal);
+        text-transform: uppercase;
+        letter-spacing: $services-h2-letter;
+
+        &::after{
+            content: '';
+            position: absolute;
+            bottom: $services-h2-after-bottom;
+            left: 0;
+            width: $services-h2-after-width;
+            @include border(solid, $services-h2-after-border-xl, $color-white);
+            border-top: none;
+            border-left: none;
+            border-right: none;
+        }
+    }
+
+    img{
+        @include space($services-img-margin, 0);
+        border: 0;
+    }
+
+    h3{
+        @include space($services-h3-margin, 0);
+        border: 0;
+        @include font($f-name-noto, $f-size-22, $color-white, $f-weight-medium, normal);
+        text-transform: uppercase;
+    }
+
+    p{
+        @include space(0, 0);
+        border: 0;
+        @include font($f-name-noto, $f-size-12, $color-white, $f-weight-semibold, normal);
+        text-transform: initial;
+    }
+}

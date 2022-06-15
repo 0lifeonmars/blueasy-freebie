@@ -1,0 +1,78 @@
+nav.navbar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include space(0, $navbar-padding-xl);
+    border: 0;
+    @include size(100%, $navbar-height);
+    background-color: $color-transdark;
+    z-index: 1000;
+
+    h1{
+        @include space(0, 0);
+        border: 0;
+        @include font($f-name-noto, $f-size-30, $color-white, $f-weight-bold, normal);
+        text-transform: uppercase;
+
+        span{
+            color: $color-cyan;
+        }
+    }
+
+    div#navbarNav{
+        div{
+            display: flex;
+            @include flex(column, center, flex-end);
+            @include space(0, 0);
+            border: 0;
+            width: 100%;
+
+            ul{
+                @include space(0, 0);
+                border: 0;
+                list-style: none;
+
+                li{
+                    display: inline-block;
+                    @include space($navbar-menu-ul-li-margin-xl, 0);
+                    border: 0;
+
+                    &:last-child{
+                        margin: 0;
+                    }
+
+                    a{
+                        @include space(0, $navbar-menu-ul-li-a-padding);
+                        @include border(solid, $navbar-menu-ul-li-a-border, transparent);
+                        @include font($f-name-noto, $f-size-14, $color-white, $f-weight-bold, normal);
+                        text-transform: uppercase;
+
+                        &:hover{
+                            color: $color-cyan;
+                            border-color: $color-cyan;
+                            text-decoration: none;
+                            -webkit-transition: all 200ms 0s linear;
+                            -moz-transition: all 200ms 0s linear;
+                            -o-transition: all 200ms 0s linear;
+                            transition: all 200ms 0s linear;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.navbar-scroll{
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    background-color: $color-dark !important;
+    z-index: 1000 !important;
+    height: auto !important;
+    padding: $navbar-scroll-padding-xl !important;
+    -webkit-transition: all 400ms 0s linear;
+    -moz-transition: all 400ms 0s linear;
+    -o-transition: all 400ms 0s linear;
+    transition: all 400ms 0s linear;
+}

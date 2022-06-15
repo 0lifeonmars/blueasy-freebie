@@ -1,0 +1,99 @@
+#contact{
+    @include space(0, $contact-margin);
+    border: 0;
+    @include bg-image($contact-bg-url, center center, no-repeat, cover);
+
+    h2{
+        position: relative;
+        @include space($contact-h2-margin, 0);
+        border: 0;
+        @include font($f-name-noto, $f-size-30, $color-white, $f-weight-light, normal);
+        text-transform: uppercase;
+        letter-spacing: $contact-h2-letter;
+
+        &::after{
+            content: '';
+            position: absolute;
+            bottom: $contact-h2-after-bottom;
+            left: 0;
+            width: $contact-h2-after-width;
+            @include border(solid, $contact-h2-after-border-xl, $color-white);
+            border-top: none;
+            border-left: none;
+            border-right: none;
+        }
+    }
+
+    label[for=contact-message]{
+        @include space($contact-label-message 0, 0);
+    }
+
+    label{
+        @include space($contact-label, 0);
+        border: 0;
+        @include font($f-name-noto, $f-size-14, $color-white, $f-weight-bold, normal);
+        text-transform: uppercase;
+    }
+
+    input[type=text], input[type=email], textarea{
+        @include border(solid, $contact-input-border, $color-white);
+        @include font($f-name-noto, $f-size-14, $color-white, $f-weight-regular, normal);
+        text-transform: initial;
+        background-color: transparent;
+
+        &:focus{
+            background-color: $color-transdark;
+            -webkit-transition: all 200ms 0s linear;
+            -moz-transition: all 200ms 0s linear;
+            -o-transition: all 200ms 0s linear;
+            transition: all 200ms 0s linear;
+        }
+
+        &::placeholder{
+            color: $color-dark;
+            font-weight: $f-weight-bold;
+            text-transform: uppercase;
+        }
+    }
+
+    input[type=text], input[type=email]{
+        @include space($contact-input-margin, $contact-input-padding);
+        @include size(100%, $contact-input-height);       
+    }
+
+    textarea{
+        @include space($contact-input-margin, $contact-textarea-padding);
+        @include size(100%, $contact-textarea-height);
+        resize: none;
+    }
+
+    input[type=submit]{
+        @include space($contact-submit-margin, $contact-submit-padding-xl);
+        border: 0;
+        @include font($f-name-noto, $f-size-14, $color-white, $f-weight-bold, normal);
+        text-transform: uppercase;
+        background-color: $color-cyan;
+
+        &:hover{
+            background-color: $color-dark;
+            -webkit-transition: all 200ms 0s linear;
+            -moz-transition: all 200ms 0s linear;
+            -o-transition: all 200ms 0s linear;
+            transition: all 200ms 0s linear;
+        }
+    }
+
+    p, address{
+        border: 0;
+        @include font($f-name-noto, $f-size-14, $color-white, $f-weight-regular, normal);
+        text-transform: initial;
+    }
+
+    p{
+        @include space($contact-p-margin, 0);
+    }
+
+    address{
+        @include space(0, 0);
+    }
+}

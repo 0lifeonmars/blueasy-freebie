@@ -1,0 +1,27 @@
+
+body{
+    .icon-services-coffee{@include max-size($icon-size-34, $icon-size-48);}
+    .icon-services-instant{@include max-size($icon-size-48, $icon-size-48);}
+    .icon-services-dslr{@include max-size($icon-size-47, $icon-size-45);}
+    .icon-services-frame{@include max-size($icon-size-48, $icon-size-48);}
+    .icon-portfolio-plus{@include max-size($icon-size-32, $icon-size-33);}
+    .icon-twitter,.icon-whois-twitter{@include max-size($icon-size-28, $icon-size-22);}
+    .icon-whois-googleplus{@include max-size($icon-size-28, $icon-size-29);}
+    .icon-whois-dribbble{@include max-size($icon-size-26, $icon-size-27);}
+    .icon-whois-coffee{@include max-size($icon-size-31, $icon-size-24);}
+    .icon-testimonials{@include max-size($icon-size-32, $icon-size-26);}
+
+    .icon-services-coffee,
+    .icon-services-instant,
+    .icon-services-dslr,
+    .icon-services-frame,
+    .icon-portfolio-plus,
+    .icon-twitter,
+    .icon-whois-twitter,
+    .icon-whois-googleplus,
+    .icon-whois-dribbble,
+    .icon-whois-coffee,
+    .icon-testimonials{
+        @include size(100%, 100%);
+    }
+}

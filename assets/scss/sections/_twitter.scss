@@ -1,0 +1,43 @@
+#twitter{
+    @include space(0, $twitter-padding);
+    border: 0;
+    background-color: $color-cyan;
+
+    h2{
+        position: relative;
+        @include space($twitter-h2-margin, 0);
+        border: 0;
+        @include font($f-name-noto, $f-size-30, $color-white, $f-weight-light, normal);
+        text-transform: uppercase;
+        letter-spacing: $twitter-h2-letter;
+
+        &::after{
+            content: '';
+            position: absolute;
+            bottom: $twitter-h2-after-top;
+            left: 0;
+            width: $twitter-h2-after-width;
+            @include border(solid, $twitter-h2-after-border-xl, $color-white);
+            border-top: none;
+            border-left: none;
+            border-right: none;
+        }
+    }
+
+    img{
+        position: absolute;
+        top: $twitter-img-top;
+        right: 0;
+    }
+
+    p{
+        @include space(0, 0);
+        border: 0;
+        @include font($f-name-noto, $f-size-28, $color-white, $f-weight-light, normal);
+        text-transform: initial;
+
+        span{
+            font-weight: $f-weight-semibold;
+        }
+    }
+}

@@ -1,0 +1,17 @@
+@mixin media($media) {
+    @if $media == xs {@media (max-width: 575.98px) { @content; }}
+        @else if $media == sm {@media (min-width: 576px) and (max-width: 767.98px) { @content; }}
+        @else if $media == md {@media (min-width: 768px) and (max-width: 991.98px) { @content; }}
+        @else if $media == lg {@media (min-width: 992px) and (max-width: 1199.98px) { @content; }}
+        @else if $media == xl {@media (min-width: 1200px) { @content;}
+    }
+}
+@mixin flex($fd, $jc, $ai){flex-direction: $fd; justify-content: $jc; align-items: $ai;}
+@mixin font($fn, $fs, $fc, $fw, $fy){font-family: $fn; font-size: $fs; color: $fc; font-weight: $fw; font-style: $fy;}
+@mixin facefont ($fn, $fs, $fw, $ft){font-family: $fn; src: $fs; font-weight: $fw; font-style: $ft;}
+@mixin space($m, $p){margin: $m; padding: $p;}
+@mixin max-size($w, $h){max-width: $w; max-height: $h;}
+@mixin min-size($w, $h){min-width: $w; min-height: $h;}    
+@mixin size($w, $h){width: $w; height: $h;}
+@mixin bg-image($bgurl, $bgposition, $bgrepeat, $bgsize){background-image: $bgurl;background-position:$bgposition;background-repeat: $bgrepeat;background-size: $bgsize;}
+@mixin border($bs,$bw,$bc){border-style: $bs;border-width: $bw;border-color: $bc;}

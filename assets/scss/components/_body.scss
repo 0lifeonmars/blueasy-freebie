@@ -1,0 +1,23 @@
+html,body{
+    @include space(0, 0);
+}
+
+body{
+    font-family: sans-serif;
+    position: relative;
+
+    .w-95{width: 95%;}
+    .w-90{width: 90%;}
+    .w-85{width: 85%;}
+    .w-80{width: 80%;}
+    .responsive-w90{width: 90%;}
+
+
+    .item-active,
+    .item-filter-active{
+        border-color: $color-cyan !important;
+        background-color: $color-cyan !important;
+        color: $color-white !important;
+    }
+}
+

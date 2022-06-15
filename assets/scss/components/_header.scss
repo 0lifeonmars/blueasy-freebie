@@ -1,0 +1,28 @@
+header{
+    @include space(0, 0);
+    border: 0;
+    @include size(100%, $header-height);
+    max-height: $header-height;
+    @include bg-image($header-bg-url, center center, no-repeat, cover);
+
+    #hero{
+        display: flex;
+        @include flex(column, center, center);
+        @include space(0, 0);
+        border: 0;
+        @include size(100%, 100%);
+
+        p{
+            @include space($hero-p-margin, $hero-p-padding);
+            border: 0;
+            @include font($f-name-noto, $f-size-42, $color-white, $f-weight-light, normal);
+            text-transform: uppercase;
+            text-align: center;
+            background-color: $color-transdark;
+
+            &:last-child{
+                margin: 0;
+            }
+        }
+    }
+}

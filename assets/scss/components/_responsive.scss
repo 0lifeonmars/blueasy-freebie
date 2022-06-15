@@ -1,0 +1,95 @@
+body{
+    .responsive-w90{
+        @include media(md){width: 100%;}
+        @include media(sm){width: 100%;}
+        @include media(xs){width: 100%;}
+    }
+}
+
+header{
+    #hero{
+        p{
+            @include media(lg){font-size: $f-size-32;}
+            @include media(md){font-size: $f-size-28; width: 80%;}
+            @include media(sm){font-size: $f-size-24; width: 80%;}
+            @include media(xs){font-size: $f-size-20; width: 80%;}
+        }
+    }
+}
+
+nav.navbar{
+    @include media(lg){height: auto; padding: $navbar-padding-lg;}
+    @include media(md){height: auto; padding: $navbar-padding-lg;}
+    @include media(sm){height: auto; padding: $navbar-padding-lg;}
+    @include media(xs){height: auto; padding: $navbar-padding-lg;}
+
+    h1{
+        @include media(md){font-size: $f-size-28;}
+        @include media(sm){font-size: $f-size-26;}
+        @include media(xs){font-size: $f-size-24;}
+    }
+
+    div#navbarNav{
+        div{
+            @include media(lg){align-items: flex-start; padding: $navbar-menu-padding-lg;}
+            @include media(md){align-items: flex-start; padding: $navbar-menu-padding-lg;}
+            @include media(sm){align-items: flex-start; padding: $navbar-menu-padding-lg;}
+            @include media(xs){align-items: flex-start; padding: $navbar-menu-padding-lg;}
+
+            ul{
+                li{
+                    @include media(lg){display: block; margin: $navbar-menu-ul-li-margin-lg;}
+                    @include media(md){display: block; margin: $navbar-menu-ul-li-margin-lg;}
+                    @include media(sm){display: block; margin: $navbar-menu-ul-li-margin-lg;}
+                    @include media(xs){display: block; margin: $navbar-menu-ul-li-margin-lg;}
+
+                    &:last-child{
+                        @include media(lg){margin: $navbar-menu-ul-li-margin-lg;} 
+                        @include media(md){margin: $navbar-menu-ul-li-margin-lg;}
+                        @include media(xs){margin: $navbar-menu-ul-li-margin-lg;} 
+                    }
+
+                    a{
+                        @include media(sm){font-size: $f-size-12;}
+                        @include media(xs){font-size: $f-size-12;}
+                    }
+                }
+            }
+        }
+    }
+}
+
+.navbar-scroll{
+    @include media(md){padding: $navbar-scroll-padding-md !important;}
+    @include media(sm){padding: $navbar-scroll-padding-md !important;}
+    @include media(xs){padding: $navbar-scroll-padding-md !important;}
+}
+
+footer{
+    ul{
+
+        li{
+            @include media(md){display: block;border-right: none;border-left: $footer-ul-li-border-md;}
+            @include media(sm){display: block;border-right: none;border-left: $footer-ul-li-border-md;}
+            @include media(xs){display: block;border-right: none;border-left: $footer-ul-li-border-md;}
+
+            &:first-child{
+                @include media(md){padding: $footer-ul-li-padding;}
+                @include media(sm){padding: $footer-ul-li-padding;}
+                @include media(xs){padding: $footer-ul-li-padding;}
+            }
+
+            a{
+                @include media(md){font-size: $f-size-12;}
+                @include media(sm){font-size: $f-size-12;}
+                @include media(xs){font-size: $f-size-12;}
+            }
+        }
+    }
+
+    p{
+        @include media(md){text-align: center; font-size: $f-size-12; margin: $footer-p-margin-md;}
+        @include media(sm){text-align: center; font-size: $f-size-12; margin: $footer-p-margin-md;}
+        @include media(xs){text-align: center; font-size: $f-size-12; margin: $footer-p-margin-md;}
+    }
+}

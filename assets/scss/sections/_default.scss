@@ -1,0 +1,69 @@
+#default{
+    @include space(0, $default-padding);
+    border: 0;
+    background-color: $color-gray;
+
+    h2{
+        position: relative;
+        @include space($default-h2-margin, 0);
+        border: 0;
+        @include font($f-name-noto, $f-size-30, $color-white, $f-weight-light, normal);
+        text-transform: uppercase;
+        letter-spacing: $default-h2-letter;
+
+        &::after{
+            content: '';
+            position: absolute;
+            bottom: $default-h2-after-bottom;
+            left: 0;
+            width: $default-h2-after-width;
+            @include border(solid, $default-h2-after-border-xl, $color-white);
+            border-top: none;
+            border-left: none;
+            border-right: none;
+        }
+    }
+
+    p{
+        @include space($default-h2-p-margin, 0);
+        border: 0;
+        @include font($f-name-noto, $f-size-14, $color-white, $f-weight-regular, normal);
+        text-transform: initial;
+
+       &::last-child{
+           margin: $default-h2-p-last-margin;
+       } 
+    }
+
+    .button{
+        display: block;
+        @include space(0, $default-button-padding);
+        width: $default-button-width-xl;
+        @include border(solid, $default-button-border, $color-dark);
+        @include font($f-name-noto, $f-size-14, $color-dark, $f-weight-bold, normal);
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: $default-button-letter;
+
+        &:hover{
+            color: $color-white;
+            background-color: $color-dark;
+            text-decoration: none;
+            -webkit-transition: all 200ms 0s linear;
+            -moz-transition: all 200ms 0s linear;
+            -o-transition: all 200ms 0s linear;
+            transition: all 200ms 0s linear;
+        } 
+    }
+
+    .video-content{
+        @include space(0, 0);
+
+        video{
+            display: block;
+            @include space(0, 0);
+            @include max-size(100%, 100%);
+            @include min-size(100%, 100%);
+        }
+    }
+}

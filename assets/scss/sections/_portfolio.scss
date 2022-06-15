@@ -1,0 +1,109 @@
+#portfolio{
+    @include space(0, $portfolio-padding);
+    border: 0;
+    background-color: $color-white;
+
+    h2{
+        position: relative;
+        @include space($portfolio-h2-margin, 0);
+        border: 0;
+        @include font($f-name-noto, $f-size-30, $color-gray, $f-weight-light, normal);
+        text-transform: uppercase;
+        letter-spacing: $portfolio-h2-letter;
+
+        &::after{
+            content: '';
+            position: absolute;
+            bottom: $portfolio-h2-after-bottom;
+            left: 0;
+            width: $portfolio-h2-after-width;
+            @include border(solid, $portfolio-h2-after-border-xl, $color-gray);
+            border-top: none;
+            border-left: none;
+            border-right: none;
+        }
+    }
+
+    .filters{
+        display: flex;
+        @include flex(column, center, flex-end);
+        @include space($portfolio-filters-margin, 0);
+        border: 0;
+        width: 100%;
+
+        ul{
+            @include space(0 ,0);
+            list-style: none;
+
+            li{
+                display: inline-block;
+                @include space(0 ,0);
+                text-align: center;
+
+                a{
+                    @include space($portfolio-filters-a-margin, $portfolio-filters-a-padding);
+                    @include border(solid, $portfolio-filters-a-border, transparent);
+                    @include font($f-name-noto, $f-size-14, $color-gray, $f-weight-bold, normal);
+                    text-transform: uppercase;
+
+                    &:last-child{
+                        margin: 0;
+                    }
+
+                    &:hover{
+                        color: $color-cyan;
+                        border-color: $color-cyan;
+                        text-decoration: none;
+                        -webkit-transition: all 200ms 0s linear;
+                        -moz-transition: all 200ms 0s linear;
+                        -o-transition: all 200ms 0s linear;
+                        transition: all 200ms 0s linear;
+                    }
+                }
+            }
+        }
+    }
+
+    .portfolio-grid{
+        @include space($portfolio-grid-margin, 0);
+        border: 0;
+
+        .responsive-w90{
+            width: 90%;
+        }
+
+        figure{
+            position: relative;
+            @include space($portfolio-grid-figure-margin, 0);
+            border: 0;
+            @include size(100%, $portfolio-grid-figure-height);
+
+            &:hover{
+                figcaption{
+                    display: flex; 
+                    -webkit-transition: all 1000ms 0s linear;
+                    -moz-transition: all 1000ms 0s linear;
+                    -o-transition: all 1000ms 0s linear;
+                    transition: all 1000ms 0s linear;  
+                }
+            }
+
+            img{
+                object-fit: cover;
+                @include space(0, 0);
+                border: 0;
+                @include size(100%, 100%);
+            }
+
+            figcaption{
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: none;
+                @include flex(column, center, center);
+                @include size(100%, 100%);
+                background-color: $color-transdark;
+            }
+        }
+    }
+}
